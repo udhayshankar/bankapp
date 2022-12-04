@@ -40,6 +40,9 @@ public class Account {
     @Column(nullable = false)
     private String currencyId;
 
+    @Version
+    private Integer version;
+
 
 
 

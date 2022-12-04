@@ -5,6 +5,7 @@ import com.mastercard.bankapp.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -21,6 +22,10 @@ public class CustomerController {
     @GetMapping("/{customerId}")
     public Optional<Customer> getCustomerById(@PathVariable  Long customerId){
             return customerService.findCustomerByCustomerId(customerId);
+    }
+    @GetMapping("/all")
+    public List<Customer> fetchAllCustomers(){
+        return customerService.fetchAllCustomers();
     }
 
 }

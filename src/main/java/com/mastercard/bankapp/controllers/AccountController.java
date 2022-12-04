@@ -5,6 +5,7 @@ import com.mastercard.bankapp.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -23,5 +24,15 @@ public class AccountController {
     @GetMapping("{customerId}")
     public Optional<Account> getAccountByCustomerId(@PathVariable String customerId){
         return accountService.findAccountByCustomerId(customerId);
+    }
+
+    @GetMapping("/all")
+    public List<Account> fetchAllAccounts(){
+        return accountService.fetchAllAccounts();
+    }
+
+    @DeleteMapping("/delete/{customerId}")
+    public void deleteAccountByCustomerId(@PathVariable String customerId){
+        accountService.deleteAccountByCustomerId(customerId);
     }
 }

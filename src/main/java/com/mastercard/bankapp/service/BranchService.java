@@ -7,6 +7,7 @@ import com.mastercard.bankapp.repository.BranchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -21,5 +22,9 @@ public class BranchService {
 
     public Optional<Branch> findByBranchId(String branchId){
         return branchRepository.findById(branchId);
+    }
+
+    public List<Branch> fetchAllBranches(){
+        return branchRepository.findAll();
     }
 }

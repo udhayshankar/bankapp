@@ -10,6 +10,10 @@ public class Constants {
     public static final String ACCOUNT_TYPE_CODE ="ACCTYP";
     public static final String CURRENCY_CODE ="CURR";
     public static final String BRANCH_CODE ="BR";
+    public static final String TRANSACTION_TYPE_CODE ="TRATYP";
+    public static final String TRANSACTION_STATUS_CODE ="TRASTAT";
+    public static final String TRANSACTION_CODE ="TRA";
+    public static final Integer TRANSACTION_CODE_LENGTH =10;
     public static final Integer LENGTH =3;
     public static final Integer ACCOUNT_NUMBER_LENGTH = 16;
     public static final Integer USER_ID_LENGTH = 7;

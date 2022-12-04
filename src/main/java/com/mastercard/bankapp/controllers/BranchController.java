@@ -5,6 +5,7 @@ import com.mastercard.bankapp.service.BranchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -22,5 +23,10 @@ public class BranchController {
         @GetMapping("/{branchId}")
     public Optional<Branch> findByBranchId(@PathVariable String branchId){
         return branchService.findByBranchId(branchId);
+    }
+
+    @GetMapping("all")
+    public List<Branch> fetchAllBranches(){
+        return branchService.fetchAllBranches();
     }
 }
