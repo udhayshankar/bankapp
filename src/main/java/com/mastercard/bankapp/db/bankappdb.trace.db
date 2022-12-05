@@ -130,3 +130,326 @@ org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL state
 select user_id from account where user_id =? and version =? for update [50200-214]
 2022-12-04 20:45:21 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:02:51 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:02:51 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:05:47 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:05:47 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:07:53 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:07:53 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:10:41 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:10:41 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:12:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:12:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:15:12 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:15:12 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:17:55 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:17:55 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:22:41 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:22:41 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:23:34 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:23:34 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:25:05 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:25:05 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:29:55 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:29:55 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:32:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:32:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:36:15 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:36:15 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:41:26 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:41:26 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:45:22 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:45:22 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:48:15 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM ACCOUNT \000d\000a\000d\000aAlter [*]table account drop column version"; SQL statement:
+SELECT * FROM ACCOUNT 
+
+Alter table account drop column version [42000-214]
+2022-12-05 11:48:55 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:48:55 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:50:11 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:50:11 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:54:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:54:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 11:55:08 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 11:55:08 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 12:00:16 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 12:00:16 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 12:00:46 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 12:00:46 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 12:05:26 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 12:05:26 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 12:07:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table {0}; SQL statement:
+select user_id from account where user_id =? for update [50200-214]
+2022-12-05 12:07:24 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-214]
+2022-12-05 12:27:26 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "delete [*]* from account where user_id = ""O17X453"""; expected "identifier"; SQL statement:
+delete * from account where user_id = "O17X453" [42001-214]
+2022-12-05 12:27:31 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "O17X453" not found; SQL statement:
+delete from account where user_id = "O17X453" [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:140)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.dml.Delete.doPrepare(Delete.java:112)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:575)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2022-12-05 12:27:45 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "delete from account where user_id = ""O17X453""\000d\000a\000d\000a[*]select * from account"; SQL statement:
+delete from account where user_id = "O17X453"
+
+select * from account [42000-214]
+2022-12-05 12:27:49 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "O17X453" not found; SQL statement:
+delete from account where user_id = "O17X453" [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:140)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.dml.Delete.doPrepare(Delete.java:112)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:575)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2022-12-05 12:28:04 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "O17X453" not found; SQL statement:
+delete from account where user_id = O17X453 [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:140)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.dml.Delete.doPrepare(Delete.java:112)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:575)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+2022-12-05 12:45:55 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE [*]TABLE TRANSACTION_STATUS SET TRANSACTION_STATUS_DESCRIPTION = 'IN_PROGRESS' WHERE TRANSACTION_STATUS_DESCRIPTION = 'In progress'"; expected "identifier"; SQL statement:
+UPDATE TABLE TRANSACTION_STATUS SET TRANSACTION_STATUS_DESCRIPTION = 'IN_PROGRESS' WHERE TRANSACTION_STATUS_DESCRIPTION = 'In progress' [42001-214]
+2022-12-05 12:46:31 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE [*]TABLE TRANSACTION_STATUS SET TRANSACTION_STATUS_DESCRIPTION = ""IN_PROGRESS"" WHERE TRANSACTION_STATUS_DESCRIPTION = ""In progress"""; expected "identifier"; SQL statement:
+UPDATE TABLE TRANSACTION_STATUS SET TRANSACTION_STATUS_DESCRIPTION = "IN_PROGRESS" WHERE TRANSACTION_STATUS_DESCRIPTION = "In progress" [42001-214]
+2022-12-05 12:47:09 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE [*]TABLE TRANSACTION_STATUS SET TRANSACTION_STATUS_DESCRIPTION = 'IN_PROGRESS' WHERE TRANSACTION_STATUS_CODE = 'TRASTAT725'"; expected "identifier"; SQL statement:
+UPDATE TABLE TRANSACTION_STATUS SET TRANSACTION_STATUS_DESCRIPTION = 'IN_PROGRESS' WHERE TRANSACTION_STATUS_CODE = 'TRASTAT725' [42001-214]

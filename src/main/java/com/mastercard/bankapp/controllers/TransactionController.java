@@ -2,11 +2,14 @@ package com.mastercard.bankapp.controllers;
 
 import com.mastercard.bankapp.exceptions.CustomException;
 import com.mastercard.bankapp.models.Transaction;
+import com.mastercard.bankapp.models.TransactionStatusEnum;
 import com.mastercard.bankapp.service.TransactionService;
+import org.hibernate.resource.transaction.spi.TransactionStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpServerErrorException;
 
 import java.util.List;
 import java.util.Optional;
@@ -21,12 +24,14 @@ public class TransactionController {
     @PostMapping("/transfer")
     public ResponseEntity transferAmount(@RequestBody Transaction transaction)  {
         try {
-            transactionService.transferAmount(transaction);
+            String res = transactionService.transferAmount(transaction);
+            if(!res.equalsIgnoreCase(TransactionStatusEnum.SUCCESS.toString()))
+                throw new HttpServerErrorException(HttpStatus.BAD_REQUEST, res);
 
         } catch (Exception ex){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
         }
-        return ResponseEntity.status(HttpStatus.OK).body("Transaction Successfull");
+        return ResponseEntity.status(HttpStatus.OK).body("Transaction Successful");
     }
 
     @GetMapping("/{transactionId}")

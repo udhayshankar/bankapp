@@ -6,8 +6,12 @@ import com.mastercard.bankapp.exceptions.CustomException;
 import com.mastercard.bankapp.models.Account;
 import com.mastercard.bankapp.models.Transaction;
 
+import com.mastercard.bankapp.models.TransactionStatus;
+import com.mastercard.bankapp.models.TransactionStatusEnum;
 import com.mastercard.bankapp.repository.TransactionRepository;
 
+import org.hibernate.TransactionException;
+import org.hibernate.dialect.lock.PessimisticEntityLockException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -40,74 +44,92 @@ public class TransactionService {
 
 
     @Transactional
+    public void performLockAndPersist(Transaction transaction,List<TransactionStatus> transactionStatuses){
+
+        try{
+            //fetching sender and receiver account details
+
+            Account senderAccount = em.find(Account.class,transaction.getSenderUserId());
+            Account receiverAccount = em.find(Account.class,transaction.getReceiverUserId());
+
+            em.lock(senderAccount, LockModeType.PESSIMISTIC_READ);
+            em.lock(receiverAccount, LockModeType.PESSIMISTIC_READ);
+
+
+            //performing transaction
+            if(transaction.getTransactionAmount() <= senderAccount.getBalance()){
+                System.out.println("if blcokkkkk"+transaction.toString());
+                Long senderBalance = senderAccount.getBalance() - transaction.getTransactionAmount();
+                Long receiverBalance = receiverAccount.getBalance() + transaction.getTransactionAmount();
+                senderAccount.setBalance(senderBalance);
+                receiverAccount.setBalance(receiverBalance);
+
+                em.merge(senderAccount);
+                em.merge(receiverAccount);
+                Optional<TransactionStatus> successTransStatus= transactionStatuses.stream().filter(t->t.getTransactionStatusDescription().equalsIgnoreCase(String.valueOf(TransactionStatusEnum.SUCCESS))).findAny();
+                //saving the transaction status code
+                transaction.setTransactionStatusCode(successTransStatus.get().getTransactionStatusCode());
+
+                System.out.println("Successful Transaction");
+            }
+            else {
+                Optional<TransactionStatus> insuffTransStatus= transactionStatuses.stream().filter(t->t.getTransactionStatusDescription().equalsIgnoreCase(String.valueOf(TransactionStatusEnum.INSUFFICIENT_BALANCE))).findAny();
+                //saving the transaction status code
+                transaction.setTransactionStatusCode(insuffTransStatus.get().getTransactionStatusCode());
+                System.out.println("Insuffience Balance");
+
+            }
+
+        }catch(PessimisticLockException ex){
+
+            System.out.println("PessimisticLockException caught");
+
+            Optional<TransactionStatus> failedTransStatus= transactionStatuses.stream().filter(t->t.getTransactionStatusDescription().equalsIgnoreCase(String.valueOf(TransactionStatusEnum.SUCCESS))).findAny();
+            //saving the transaction status code
+            transaction.setTransactionStatusCode(failedTransStatus.get().getTransactionStatusCode());
+            System.out.println("pessiii"+transaction.toString());
+
+        }
+    }
+
+    @Transactional
     public String transferAmount(Transaction transaction) throws Exception {
+        List<TransactionStatus> transactionStatuses = null;
+
         try {
+            // fetch all transaction statuses
+            transactionStatuses = transactionStatusService.fetchAllTransactionStatuses();
+
             //Generating transaction id
             transaction.setTransactionId(Constants.TRANSACTION_CODE + Helper.generateRandomValues(Constants.NUMERIC_CONSTANTS, Constants.TRANSACTION_CODE_LENGTH));
 
             //storing transaction date and time
             transaction.setTransactionDateTime(new Date().toString());
+            Optional<TransactionStatus> inProgressTransStatus= transactionStatuses.stream().filter(t->t.getTransactionStatusDescription().equalsIgnoreCase(String.valueOf(TransactionStatusEnum.IN_PROGRESS))).findAny();
             //updating transaction to IN PROGRESS
-            transaction.setTransactionStatusCode(transactionStatusService.getByTransactionStatusDesc("In progress").get().getTransactionStatusCode());
-
-
-            //fetching sender and receiver account details
-
-//            Account senderAccount = em.find(Account.class,transaction.getSenderUserId());
-//            Account receiverAccount = em.find(Account.class,transaction.getReceiverUserId());
+            transaction.setTransactionStatusCode(inProgressTransStatus.get().getTransactionStatusCode());
 //
-//            em.lock(senderAccount, LockModeType.OPTIMISTIC_FORCE_INCREMENT);
-//            em.lock(receiverAccount, LockModeType.OPTIMISTIC_FORCE_INCREMENT);
-            Account senderAccount = accountService.findOptimisticLock(transaction.getSenderUserId());
-            Account receiverAccount = accountService.findOptimisticLock(transaction.getReceiverUserId());
+            Thread.sleep(10000);
 
-            System.out.println("Values start");
-            System.out.println(senderAccount.getVersion());
-            System.out.println(receiverAccount.getVersion());
-            System.out.println(accountService.findAccountByCustomerId(transaction.getSenderUserId()).get().getVersion());
-            System.out.println(accountService.findAccountByCustomerId(transaction.getReceiverUserId()).get().getVersion());
-            System.out.println("Values endd");
-
-            transaction = transactionRepository.saveAndFlush(transaction);
-            Thread.sleep(15000);
-            //performing transaction
-            if(transaction.getTransactionAmount() <= senderAccount.getBalance()){
-                    Long senderBalance = senderAccount.getBalance() - transaction.getTransactionAmount();
-                    Long receiverBalance = receiverAccount.getBalance() + transaction.getTransactionAmount();
-                    senderAccount.setBalance(senderBalance);
-                    receiverAccount.setBalance(receiverBalance);
-
-
-
-                //saving the transaction status code
-                    transaction.setTransactionStatusCode(transactionStatusService.getByTransactionStatusDesc("Success").get().getTransactionStatusCode());
-
-                return "Transaction Successful";
-            }
-            else
-            throw new HttpServerErrorException(HttpStatus.BAD_REQUEST,"Insufficient Balance on Sender Account");
-
-        }catch(OptimisticLockException ex){
-            transaction.setTransactionStatusCode(transactionStatusService.getByTransactionStatusDesc("Failed").get().getTransactionStatusCode());
-            System.out.println("OptimisticLockException caught");
+            performLockAndPersist(transaction,transactionStatuses);
 
 
         }
+
+
         catch (Exception ex){
-            transaction.setTransactionStatusCode(transactionStatusService.getByTransactionStatusDesc("Failed").get().getTransactionStatusCode());
-            System.out.println("Exception caught successfullyyyyy");
-
-
+            System.out.println("Exception ex");
+            Optional<TransactionStatus> failedTransStatus= transactionStatuses.stream().filter(t->t.getTransactionStatusDescription().equalsIgnoreCase(String.valueOf(TransactionStatusEnum.FAILED))).findAny();
+            //saving the transaction status code
+            transaction.setTransactionStatusCode(failedTransStatus.get().getTransactionStatusCode());
 
         }
         finally {
-            System.out.println("finally"+transaction.toString());
-            transactionRepository.saveAndFlush(transaction);
-
-
+            //update the transaction status
+            updateTransaction(transaction);
         }
 
-        return null;
+        return transactionStatuses.stream().filter(t->t.getTransactionStatusCode().equalsIgnoreCase(transaction.getTransactionStatusCode())).findAny().get().getTransactionStatusDescription();
     }
 
     public Optional<Transaction> findByID(String id){
@@ -118,5 +140,9 @@ public class TransactionService {
         return transactionRepository.findAll();
     }
 
+    @Transactional
+    public Transaction updateTransaction(Transaction transaction){
+        return transactionRepository.save(transaction);
+    }
 
 }
