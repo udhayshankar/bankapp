@@ -1,10 +1,8 @@
 package com.mastercard.bankapp.controllers;
 
-import com.mastercard.bankapp.exceptions.CustomException;
 import com.mastercard.bankapp.models.Transaction;
-import com.mastercard.bankapp.models.TransactionStatusEnum;
+import com.mastercard.bankapp.models.enums.TransactionStatusEnum;
 import com.mastercard.bankapp.service.TransactionService;
-import org.hibernate.resource.transaction.spi.TransactionStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

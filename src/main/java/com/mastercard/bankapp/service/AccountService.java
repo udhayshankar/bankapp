@@ -4,18 +4,13 @@ import com.mastercard.bankapp.constants.Constants;
 import com.mastercard.bankapp.constants.Helper;
 import com.mastercard.bankapp.models.Account;
 import com.mastercard.bankapp.repository.AccountRepository;
-import com.mastercard.bankapp.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Lock;
-import org.springframework.data.jpa.repository.QueryHints;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.LockModeType;
-import javax.persistence.LockTimeoutException;
-import javax.persistence.QueryHint;
 import java.util.List;
 import java.util.Optional;
-import java.util.Random;
 
 @Service
 public class AccountService {

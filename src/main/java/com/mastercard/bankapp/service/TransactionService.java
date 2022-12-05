@@ -2,27 +2,18 @@ package com.mastercard.bankapp.service;
 
 import com.mastercard.bankapp.constants.Constants;
 import com.mastercard.bankapp.constants.Helper;
-import com.mastercard.bankapp.exceptions.CustomException;
 import com.mastercard.bankapp.models.Account;
 import com.mastercard.bankapp.models.Transaction;
-
 import com.mastercard.bankapp.models.TransactionStatus;
-import com.mastercard.bankapp.models.TransactionStatusEnum;
+import com.mastercard.bankapp.models.enums.TransactionStatusEnum;
 import com.mastercard.bankapp.repository.TransactionRepository;
-
-import org.hibernate.TransactionException;
-import org.hibernate.dialect.lock.PessimisticEntityLockException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import org.springframework.web.client.HttpServerErrorException;
-
-
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.LockModeType;
+import javax.persistence.PessimisticLockException;
 import javax.transaction.Transactional;
-
-
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.mastercard.bankapp.models;
+package com.mastercard.bankapp.models.enums;
 
 public enum TransactionStatusEnum {
     IN_PROGRESS,
