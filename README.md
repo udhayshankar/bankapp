@@ -17,6 +17,15 @@ The tech stack used are as follows
   4. REST
   
   
+  
+
+The H2 database bankapp looks as follows. The database schema has been designed in such a way that it can be as scalable as possible by storing branch details, status and type details for the accounts, and adding currency, types, status to the transactions. Customer table is to store customer details
+
+
+<img width="550" alt="image" src="https://user-images.githubusercontent.com/42512377/205918623-81a9c245-1840-4676-82c8-e20500992747.png">
+
+
+  
  ### REST APIS  as follows
  
  ### Curl commands
@@ -245,13 +254,3 @@ curl --request POST \
 	"transactionDescription":"jkl"
 }'
 
-
-
-  
- 
-
-
-The H2 database bankapp looks as follows. The database schema has been designed in such a way that it can be as scalable as possible by storing branch details, status and type details for the accounts, and adding currency, types, status to the transactions. Customer table is to store customer details
-
-
-<img width="550" alt="image" src="https://user-images.githubusercontent.com/42512377/205918623-81a9c245-1840-4676-82c8-e20500992747.png">
